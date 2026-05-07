@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: Arial;
     font-size: 18px; 
-     margin-bottom: 150px;
 }
 
 
@@ -13,7 +12,38 @@ body {
     text-align: center;
 }
 
-
+.rgb{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(
+      90deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    background-size: 400% 400%;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 5s linear infinite;
+  }
+  
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 .intro {
     display: flex;
@@ -304,6 +334,7 @@ body {
 .search-box {
     position: relative;
     width: 180px; 
+    
 }
 
 .search-box input {
@@ -322,7 +353,8 @@ body {
     transform: translateY(-50%);
     font-size: 14px;
     pointer-events: none;
-   color:white;
+    color:white;
+    
 }
 
 .contact {
@@ -333,7 +365,7 @@ body {
 
 .contact-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* từ 3 → 4 */
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); 
     gap: 20px;
     max-width: 1200px;
     margin: auto;
@@ -341,12 +373,15 @@ body {
 
 
 .contact-col {
+    min-width:0;
     flex: 1 1 250px; 
     width: 100%;
 }
-
+.contact-col p,
 .contact-col h3,
 .contact-col h4 {
+    word-break:normal;
+    overflow-wrap: break-word;
     margin-bottom: 12px;
 }
 
@@ -358,6 +393,8 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-content: flex-start;
+    
    
 }
 
@@ -365,6 +402,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.dchi{
+    align-self: flex-start;
+    transform: translateX(15px);
+}
+
+.phone{
+    align-self: flex-start;
+    transform: translateX(15px);
+}
+
+.mail{
+    align-self: flex-start;
+    transform: translateX(15px);
+}
+
+.GT{
+    text-align: justify;
+    padding: 0 15px;
 }
 
 .container {
@@ -383,6 +440,6 @@ body {
 
 
 .donate h4 {
-    font-size: 18px;   /* tăng kích thước */
-    font-weight: bold; /* in đậm */
+    font-size: 18px;   
+    font-weight: bold; 
 }
