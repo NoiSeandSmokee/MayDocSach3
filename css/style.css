@@ -422,6 +422,12 @@ body {
 .GT{
     text-align: justify;
     padding: 0 15px;
+    align-items: flex-start;
+    transform: translateX(-40px);
+
+}
+.GT h3{
+    margin-left: 15px;
 }
 
 .container {
@@ -442,4 +448,19 @@ body {
 .donate h4 {
     font-size: 18px;   
     font-weight: bold; 
+}
+
+@media(max-width:768px){
+
+    .donate{
+        align-items: center;
+        text-align: center;
+    }
+
+    .qr{
+        display: block;
+        margin: 20px auto;
+        width: 220px;
+    }
+
 }
