@@ -450,7 +450,39 @@ body {
     font-weight: bold; 
 }
 
-@media(max-width:768px){
+@media(max-width:1024px){
+
+    .contact-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .contact-col{
+        min-width: 0;
+    }
+
+    .contact-col h3,
+    .contact-col h4{
+        font-size: 16px;
+    }
+
+    .contact-col p{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .GT{
+        transform: none !important;
+        padding: 0 10px;
+    }
+
+    .dchi,
+    .phone,
+    .mail{
+        transform: none !important;
+        align-self: flex-start;
+    }
 
     .donate{
         align-items: center;
@@ -458,9 +490,8 @@ body {
     }
 
     .qr{
-        display: block;
-        margin: 20px auto;
-        width: 220px;
+        width: 160px;
+        margin: 15px auto;
     }
 
 }
